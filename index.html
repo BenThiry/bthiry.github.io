@@ -3,49 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homework Sites</title>
+    <title>Main Site</title>
 </head>
 <body>
     <header>
-        <h1>Homework Sites</h1>
+        <h1>Main Site</h1>
     </header>
 
     <section>
-        <h2>Main Site</h2>
-        <p><a href="index.html">Go to Main Site</a></p>
-    </section>
-
-    <section>
         <h2>Folders</h2>
-        <ul id="folderList"></ul>
+        <ul id="folderList">
+            <!-- JavaScript will add folder links here -->
+        </ul>
     </section>
 
     <script>
-
-        function addFolderLinks() {
-            const folderList = document.getElementById("folderList");
-
-
-            const folders = [
-                { name: "BasicWebDev", path: "BasicWebDev" },
-                { name: "BuildingTables", path: "BuildingTables" },
-                { name: "Color", path: "Color" },
-                { name: "MathTest", path: "MathTest" },
-                { name: "StarterGallery", path: "StarterGallery" }
-            ];
-
-            folders.forEach(folder => {
-                const link = document.createElement("a");
-                link.href = `${folder.path}/index.html`;
-                link.textContent = folder.name;
-                const listItem = document.createElement("li");
-                listItem.appendChild(link);
-                folderList.appendChild(listItem);
-            });
+        // Function to load folder links dynamically
+        function loadFolderLinks() {
+            fetch('folderList.php')
+                .then(response => response.text())
+                .then(data => {
+                    const folderList = document.getElementById('folderList');
+                    folderList.innerHTML = data;
+                })
+                .catch(error => console.error('Error:', error));
         }
 
-     
-        addFolderLinks();
+        // Call the function to load folder links
+        loadFolderLinks();
     </script>
 </body>
 </html>
