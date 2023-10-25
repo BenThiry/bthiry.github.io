@@ -1,42 +1,63 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sample Table</title>
+    <title>Smartphone Comparison</title>
+    <style>
+        table {
+            border: 1px solid black;
+            width: 80%;
+            margin: 0 auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <table border="1">
-        <caption>Product Comparison</caption>
-        <tr>
-            <th>Product</th>
-            <th>Price</th>
-            <th>Features</th>
-        </tr>
-        <tr>
-            <td rowspan="2">Product A</td>
-            <td>$100</td>
-            <td>Feature 1, Feature 2</td>
-        </tr>
-        <tr>
-            <td>$120</td>
-            <td>Feature 1, Feature 2, Feature 3</td>
-        </tr>
-        <tr>
-            <td>Product B</td>
-            <td>$90</td>
-            <td>Feature 1, Feature 3</td>
-        </tr>
-        <tr>
-            <td>Product C</td>
-            <td>$110</td>
-            <td>Feature 2, Feature 3</td>
-        </tr>
+    <table>
+        <caption>Smartphone Comparison</caption>
+        <thead>
+            <tr>
+                <th>Smartphone</th>
+                <th>Price</th>
+                <th>Screen Size</th>
+                <th>Camera</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">iPhone 13</td>
+                <td>$799</td>
+                <td>6.1 inches</td>
+                <td>12 MP dual-camera</td>
+            </tr>
+            <tr>
+                <td>$999</td>
+                <td>6.7 inches</td>
+                <td>12 MP triple-camera</td>
+            </tr>
+            <tr>
+                <td>Samsung Galaxy S21</td>
+                <td>$799</td>
+                <td>6.2 inches</td>
+                <td>12 MP triple-camera</td>
+            </tr>
+            <tr>
+                <td>Google Pixel 6</td>
+                <td>$699</td>
+                <td>6.4 inches</td>
+                <td>50 MP dual-camera</td>
+            </tr>
+        </tbody>
     </table>
 
-    <p>Conclusions based on the table:</p>
-    <ul>
-        <li>Product B is the most affordable option.</li>
-        <li>Product A offers the most features.</li>
-        <li>Product C has a good balance between price and features.</li>
-    </ul>
+    <p>Conclusions based on the smartphone comparison:</p>
+    <ol>
+        <li>iPhone 13 offers two variants with different screen sizes and camera options.</li>
+        <li>Samsung Galaxy S21 has a competitive price with a triple-camera setup.</li>
+        <li>Google Pixel 6 stands out with a high-resolution camera.</li>
+    </ol>
 </body>
 </html>
