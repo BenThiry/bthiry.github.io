@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bens Awesome News Thingy</title>
+    <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <header>
@@ -13,7 +14,7 @@
     <section>
         <h2>Latest News Article</h2>
         <p>Here's a short introduction to our latest news article. Click the link below to read more:</p>
-        <a href="assignment1.html">Read More</a>
+        <a href="file:///C|/Users/Zeke/Documents/GitHub/bthiry.github.io/assignment1.html">Read More</a>
     </section>
 
     <section>
@@ -25,40 +26,54 @@
     <section>
         <h2>Download PDF</h2>
         <p>You can download a PDF version of our news article for offline reading:</p>
-        <a href="pdfs/assignment1.pdf" target="_blank" download>Download PDF</a>
+        <a href="file:///C|/Users/Zeke/Documents/GitHub/bthiry.github.io/pdfs/assignment1.pdf" target="_blank" download>Download PDF</a>
     </section>
 
-    <section>
-        <h2>Links to Folders</h2>
-        <ul id="folderLinks"></ul>
+    <section id="homeworkSection" style="display: none;">
+        <h2>Homework Stuff</h2>
+        <ul id="folderLinks">
+
+        </ul>
     </section>
 
     <script>
-   
-        function addFolderLinks() {
-            const folderLinks = document.getElementById("folderLinks");
-            folderLinks.innerHTML = "";
+        const folderLinks = document.getElementById("folderLinks");
+        const homeworkSection = document.getElementById("homeworkSection");
+        let isHidden = true;
+        let keyBuffer = "";
 
-    
+        function toggleHomeworkVisibility() {
+            isHidden = !isHidden;
+            homeworkSection.style.display = isHidden ? "none" : "block";
+            keyBuffer = ""; // Clear the key buffer
+        }
+
+        function addFolderLinks() {
             const folders = [
-                { name: "BuildingTables", path: "BuildingTables" },
-                { name: "Color", path: "Color" },
-                { name: "MathTest", path: "MathTest" },
-                { name: "StarterGallery", path: "StarterGallery" }
+                "BuildingTables",
+                "Color",
+                "MathTest",
+                "StarterGallery"
             ];
 
             folders.forEach(folder => {
                 const link = document.createElement("a");
-                link.href = `${folder.path}/${folder.name}.html`;
-                link.textContent = `Visit ${folder.name}`;
+                link.href = `BasicWebDev/${folder}/index.html`;
+                link.textContent = `Visit ${folder}`;
                 const listItem = document.createElement("li");
                 listItem.appendChild(link);
                 folderLinks.appendChild(listItem);
             });
         }
 
-      
         addFolderLinks();
+
+        document.addEventListener("keydown", function (event) {
+            keyBuffer += event.key;
+            if (keyBuffer.includes("awesome")) {
+                toggleHomeworkVisibility();
+            }
+        });
     </script>
 </body>
 </html>
