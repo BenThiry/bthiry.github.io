@@ -3,34 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Site</title>
+    <title>Bens Awesome News Thingy</title>
 </head>
 <body>
     <header>
-        <h1>Main Site</h1>
+        <h1>This is Bens Awesome Site</h1>
     </header>
 
     <section>
-        <h2>Folders</h2>
-        <ul id="folderList">
-            <!-- JavaScript will add folder links here -->
-        </ul>
+        <h2>Latest News Article</h2>
+        <p>Here's a short introduction to our latest news article. Click the link below to read more:</p>
+        <a href="assignment1.html">Read More</a>
+    </section>
+
+    <section>
+        <h2>External News Source</h2>
+        <p>Top 50 Best Podcasts Of 2023:</p>
+        <a href="https://www.timeout.com/things-to-do/best-podcasts" target="_blank">External News Source</a>
+    </section>
+
+    <section>
+        <h2>Download PDF</h2>
+        <p>You can download a PDF version of our news article for offline reading:</p>
+        <a href="pdfs/assignment1.pdf" target="_blank" download>Download PDF</a>
+    </section>
+
+    <section>
+        <h2>Links to Folders</h2>
+        <ul id="folderLinks"></ul>
     </section>
 
     <script>
-        // Function to load folder links dynamically
-        function loadFolderLinks() {
-            fetch('folderList.php')
-                .then(response => response.text())
-                .then(data => {
-                    const folderList = document.getElementById('folderList');
-                    folderList.innerHTML = data;
-                })
-                .catch(error => console.error('Error:', error));
+   
+        function addFolderLinks() {
+            const folderLinks = document.getElementById("folderLinks");
+            folderLinks.innerHTML = "";
+
+    
+            const folders = [
+                { name: "BuildingTables", path: "BuildingTables" },
+                { name: "Color", path: "Color" },
+                { name: "MathTest", path: "MathTest" },
+                { name: "StarterGallery", path: "StarterGallery" }
+            ];
+
+            folders.forEach(folder => {
+                const link = document.createElement("a");
+                link.href = `${folder.path}/${folder.name}.html`;
+                link.textContent = `Visit ${folder.name}`;
+                const listItem = document.createElement("li");
+                listItem.appendChild(link);
+                folderLinks.appendChild(listItem);
+            });
         }
 
-        // Call the function to load folder links
-        loadFolderLinks();
+      
+        addFolderLinks();
     </script>
 </body>
 </html>
