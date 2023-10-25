@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Sites</title>
+</head>
+<body>
+    <header>
+        <h1>Homework Sites</h1>
+    </header>
+
+    <section>
+        <h2>Folders</h2>
+        <ul id="folderList"></ul>
+    </section>
+
+    <script>
+        // Function to dynamically add folder links
+        function addFolderLinks() {
+            const folderList = document.getElementById("folderList");
+
+            // List of folders and their names
+            const folders = [
+                { name: "BuildingTables", path: "BuildingTables" },
+                { name: "Color", path: "Color" },
+                { name: "MathTest", path: "MathTest" },
+                { name: "StarterGallery", path: "StarterGallery" }
+            ];
+
+            folders.forEach(folder => {
+                const link = document.createElement("a");
+                link.href = `${folder.path}/index.html`;
+                link.textContent = folder.name;
+                const listItem = document.createElement("li");
+                listItem.appendChild(link);
+                folderList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to add folder links
+        addFolderLinks();
+    </script>
+</body>
+</html>

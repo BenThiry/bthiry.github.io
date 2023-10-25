@@ -9,13 +9,13 @@
     <header>
         <h1>This is Bens Awesome Site</h1>
     </header>
-    
+
     <section>
         <h2>Latest News Article</h2>
         <p>Here's a short introduction to our latest news article. Click the link below to read more:</p>
         <a href="assignment1.html">Read More</a>
     </section>
-    
+
     <section>
         <h2>External News Source</h2>
         <p>Top 50 Best Podcasts Of 2023:</p>
@@ -27,5 +27,38 @@
         <p>You can download a PDF version of our news article for offline reading:</p>
         <a href="pdfs/assignment1.pdf" target="_blank" download>Download PDF</a>
     </section>
+
+    <section>
+        <h2>Links to Folders</h2>
+        <ul id="folderLinks"></ul>
+    </section>
+
+    <script>
+   
+        function addFolderLinks() {
+            const folderLinks = document.getElementById("folderLinks");
+            folderLinks.innerHTML = "";
+
+    
+            const folders = [
+                { name: "BuildingTables", path: "BuildingTables" },
+                { name: "Color", path: "Color" },
+                { name: "MathTest", path: "MathTest" },
+                { name: "StarterGallery", path: "StarterGallery" }
+            ];
+
+            folders.forEach(folder => {
+                const link = document.createElement("a");
+                link.href = `${folder.path}/${folder.name}.html`;
+                link.textContent = `Visit ${folder.name}`;
+                const listItem = document.createElement("li");
+                listItem.appendChild(link);
+                folderLinks.appendChild(listItem);
+            });
+        }
+
+      
+        addFolderLinks();
+    </script>
 </body>
 </html>
