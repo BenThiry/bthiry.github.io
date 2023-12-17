@@ -1,91 +1,38 @@
+<!-- baseball_scorecard.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puzzle Assignment</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-
-    header, main, footer {
-      padding: 20px;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-    }
-
-    main {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 20px;
-      justify-content: center;
-    }
-
-    .flex-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .flex-item {
-      width: 100px;
-      height: 100px;
-      margin: 5px;
-      background-size: cover;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    footer {
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  <title>Baseball Scorecard</title>
 </head>
 <body>
 
-  <header>
-    <h1>Ben Thiry</h1>
-    <h2>Selected Puzzle: Butterflies</h2>
-  </header>
+  <h1>Baseball Scorecard</h1>
 
-  <main>
- 
-    <div class="flex-container">
-
-      <div class="flex-item" style="background-image: url('images/puzzle1_A.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_B.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_C.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_D.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_E.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_F.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_G.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_H.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_I.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_J.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_K.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_L.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_M.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_N.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_O.jpg');"></div>
-      <div class="flex-item" style="background-image: url('images/puzzle1_P.jpg');"></div>
-    
-    </div>
-
-  
-    <img src="images/puzzle1_Q.jpg" alt="Trick Piece" class="hidden">
-  </main>
-
-  <footer>
-    <p>Date: 12/17/2023</p>
-  </footer>
+  <table>
+    <thead>
+      <tr>
+        <th>Inning</th>
+        <th>Team 1</th>
+        <th>Team 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>1</td>
+        <td>4</td>
+      </tr>
+      <!-- Add more rows as needed -->
+    </tbody>
+  </table>
 
 </body>
 </html>
