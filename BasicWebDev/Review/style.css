@@ -1,70 +1,35 @@
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f8f8;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.title {
-    text-align: center;
-    margin-bottom: 20px;
-    opacity: 0;
-    animation: fadeIn 1s ease-out forwards;
-}
-
-.cards-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-}
-
+/* General styles for all cards */
 .card {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+  position: relative;
+  width: 200px;
+  height: 150px;
+  background-color: #f0f0f0;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card .question {
-    font-weight: bold;
-}
-
-.card .answer {
-    display: none;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
+/* Styles for revealed answers */
 .card.clicked .answer {
-    display: block;
-    opacity: 1;
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+/* Styles for hiding answers initially */
+.card .answer {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
-.card.animated {
-    transform: rotate(5deg);
-    transition: transform 0.3s ease-in-out;
+
+/* Additional styling for questions */
+.card .question {
+  font-weight: bold;
+}
+
+/* Optional: Add hover effect */
+.card:hover {
+  transform: scale(1.1);
 }
