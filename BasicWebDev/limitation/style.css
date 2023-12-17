@@ -7,9 +7,9 @@ body {
 }
 
 .image-project {
-    position: relative; /* Make it a positioning context for absolute positioning */
-    width: 300px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
+    position: relative;
+    width: 300px;
+    height: 200px;
     margin-bottom: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -18,89 +18,63 @@ body {
 .image-project img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center; /* Center the image */
+    object-fit: contain;
+    object-position: center;
     transition: transform 0.3s ease;
 }
 
 .overlay-text {
     position: absolute;
-    top: 50%; /* Adjust as needed to vertically center */
-    left: 50%; /* Adjust as needed to horizontally center */
-    transform: translate(-50%, -50%); /* Center the text precisely */
-    font-size: 24px; /* Adjust as needed */
-    color: white; /* Adjust the color as needed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
     font-weight: bold;
-}
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-.image-project {
-    width: 300px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* Keep overflow property if you still want box-shadow */
-}
-
-.image-project img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Use 'contain' to fit the entire image without cropping */
-    object-position: center; /* Center the image */
-    transition: transform 0.3s ease;
-}
-
-/* ... (rest of your CSS) */
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 100vh;
-    margin: 0;
-}
-
-.image-project {
-    width: 300px; /* Adjust as needed */
-    height: 200px; /* Adjust as needed */
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.image-project img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center; /* Center the image */
-    transition: transform 0.3s ease;
+    z-index: 1;
 }
 
 .negative-image img {
     filter: invert(100%) hue-rotate(1000deg);
 }
 
-.sepia-image {
-
-}
-
 .sepia-image img {
     width: 100%;
     height: 100%;
     filter: sepia(100%);
-    object-fit: cover;
-    object-position: center; /* Center the image */
-    border-radius: 50%; /* Make it an oval shape */
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
     transition: transform 0.3s ease;
 }
 
 .blur-image img {
-    filter: blur(5px); /* Adjust the blur amount as needed */
+    filter: blur(5px);
 }
 
 .butterfly-image {
     filter: invert(100%);
+}
+
+.tictactoe-wrap {
+    position: relative;
+    z-index: 2; /* Ensure the Tic Tac Toe image is above the other images */
+    margin: -10px; /* Adjust the margin to make it wrap around the football field image */
+}
+
+.tictactoe-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Use 'cover' to fill the container while maintaining aspect ratio */
+    object-position: center;
+    border-radius: 10px; /* Adjust the border-radius as needed */
+}
+
+.football-field {
+    border: 10px solid transparent;
+    border-image-source: url(images/tic-tac-toe.png);
+    border-image-slice: 50 46 45 48;
+	border-image-width: 20px 20px 20px 20px;
+	border-image-outset:0px 0px 0px 0px;
+    border-image-repeat: repeat repeat;
 }

@@ -1,42 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <title>CSS3 Assignment</title>
+  <style> 
+    .image-project {
+        position: relative;
+        width: 300px;
+        height: 200px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    .image-project img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        transition: transform 0.3s ease;
+    }
+
+    .overlay-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        color: white;
+        font-weight: bold;
+        z-index: 1;
+    }
+
+    .negative-image img {
+        filter: invert(100%) hue-rotate(1000deg);
+    }
+
+    .sepia-image img {
+        width: 100%;
+        height: 100%;
+        filter: sepia(100%);
+        object-fit: contain;
+        object-position: center;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+    }
+
+    .blur-image img {
+        filter: blur(5px);
+    }
+
+    .butterfly-image {
+        filter: invert(100%);
+    }
+
+    .tictactoe-wrap {
+        position: relative;
+        z-index: 2; /* Ensure the Tic Tac Toe image is above the other images */
+    }
+
+    .tictactoe-wrap img {
+        width: 120%; /* Adjust the width to make it wrap around the football field image */
+        height: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Add the border image styling to the football field image */
+    .football-field {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image-source: url(images/tic-tac-toe.png);
+        border-image-slice: 30;
+        border-image-repeat: round;
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Image projects -->
-    <div class="image-project">
-        <img src="images/butterfly.jpg" alt="Butterfly Project" class="butterfly-image">
-    </div>
+  <!-- Image projects -->
+  <div class="image-project butterfly-image">
+      <img src="images/butterfly.jpg" alt="Butterfly Project">
+  </div>
 
-    <div class="image-project negative-image">
-        <img src="images/dinosaur.png" alt="Dinosaur Project">
-    </div>
+  <div class="image-project negative-image">
+      <img src="images/dinosaur.png" alt="Dinosaur Project">
+  </div>
 
-    <div class="image-project">
-        <img src="images/football_field.jpg" alt="Football Field Project">
-    </div>
+  <div class="image-project football-field">
+      <img src="images/football_field.jpg" alt="Football Field Project">
+      <p>/* Add this block to your existing CSS */</p>
+      <p>.image-project {<br>
+        position: relative;<br>
+        width: 300px;<br>
+        height: 200px;<br>
+        margin-bottom: 20px;<br>
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);<br>
+        overflow: hidden;<br>
+        background: linear-gradient(to bottom, #3498db, #1abc9c); /* Adjust the colors as needed */<br>
+        }</p>
+      <p>.image-project img {<br>
+        width: 100%;<br>
+        height: 100%;<br>
+        object-fit: contain;<br>
+        object-position: center;<br>
+        transition: transform 0.3s ease;<br>
+        }</p>
+      <p>.overlay-text {<br>
+        position: absolute;<br>
+        top: 50%;<br>
+        left: 50%;<br>
+        transform: translate(-50%, -50%);<br>
+        font-size: 24px;<br>
+        color: white;<br>
+        font-weight: bold;<br>
+        z-index: 1;<br>
+        }<br>
+      </p>
+  </div>
 
-    <div class="image-project sepia-image">
-        <img style="border:2px solid black;" src="images/penguins.jpg" alt="Penguins Project">
-    </div>
+  <div class="image-project sepia-image">
+      <img style="border:2px solid black;" src="images/penguins.jpg" alt="Penguins Project">
+  </div>
 
-    <div class="image-project">
-        <img src="images/seagull.png" alt="Seagull Project">
-    </div>
+  <div class="image-project">
+    <p> <img src="images/seagull.png" alt="Seagull Project"> </p>
+      <p>&nbsp;</p>
+  </div>
 
-    <div class="image-project blur-image">
-        <img src="images/theater_stage.jpg" alt="Theater Stage Project">
-    </div>
+  <div class="image-project blur-image">
+      <img src="images/theater_stage.jpg" alt="Theater Stage Project">
+      <div class="overlay-text">Presenting</div>
+  </div>
 
-    <div class="image-project">
-        <img src="images/tic-tac-toe.png" alt="Tic Tac Toe Project">
-    </div>
+  <div class="image-project tictactoe-wrap">
+      <img src="images/tic-tac-toe.png" alt="Tic Tac Toe Project">
+  </div>
 
 </body>
 </html>
