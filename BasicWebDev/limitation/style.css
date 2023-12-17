@@ -1,3 +1,4 @@
+/* General styles for all image projects */
 .image-project {
   position: relative;
   width: 300px;
@@ -7,6 +8,7 @@
   overflow: hidden;
 }
 
+/* Image styles */
 .image-project img {
   width: 100%;
   height: 100%;
@@ -15,6 +17,7 @@
   transition: transform 0.3s ease;
 }
 
+/* Overlay text styles */
 .overlay-text {
   position: absolute;
   top: 50%;
@@ -26,10 +29,12 @@
   z-index: 1;
 }
 
+/* Negative image styles */
 .negative-image img {
   filter: invert(100%) hue-rotate(1000deg);
 }
 
+/* Sepia image styles */
 .sepia-image img {
   width: 100%;
   height: 100%;
@@ -40,28 +45,23 @@
   transition: transform 0.3s ease;
 }
 
+/* Blur image styles */
 .blur-image img {
   filter: blur(5px);
 }
 
+/* Butterfly image styles */
 .butterfly-image {
   filter: invert(100%);
 }
 
+/* Tic-Tac-Toe Wrap styles */
 .tictactoe-wrap {
   position: relative;
   z-index: 2;
 }
 
-.tictactoe-wrap img {
-  width: 100%;
-  height: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
+/* Football field styles */
 .football-field {
   border: 18px solid transparent;
   border-image-source: url(images/tic-tac-toe.png);
@@ -71,6 +71,7 @@
   border-image-repeat: repeat repeat;
 }
 
+/* Seagull image project styles */
 .image-project-seagull {
   position: relative;
   width: 300px;
@@ -81,6 +82,7 @@
   background: linear-gradient(to bottom right, #8989ff, #fdfdff);
 }
 
+/* Seagull image styles */
 .image-project-seagull img {
   width: 100%;
   height: 100%;
