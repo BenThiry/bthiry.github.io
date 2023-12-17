@@ -5,7 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f0f0;
-  margin-bottom: 100px; /* Add extra space at the bottom */
+  margin-bottom: 250px; /* Add more extra space at the bottom */
 }
 
 header {
@@ -45,4 +45,3 @@ footer {
   left: 0;
   right: 0;
 }
-
