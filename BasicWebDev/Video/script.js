@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
 
     // Set a threshold for when to show the video (adjust as needed)
-    const threshold = document.documentElement.scrollHeight - window.innerHeight - 100;
+    const threshold = document.documentElement.scrollHeight - window.innerHeight - 200;
 
     if (scrollPosition >= threshold) {
       videoFooter.style.display = "block";
