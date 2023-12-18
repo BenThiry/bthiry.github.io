@@ -37,7 +37,7 @@ body {
     width: 100%;
     height: 100%;
     transform-style: preserve-3d;
-    transition: transform 0.5s ease; /* Added transition property */
+    transition: transform 0.5s ease; 
 }
 
 .card:hover .content {
@@ -128,7 +128,7 @@ body {
     align-items: center;
     position: absolute;
     backface-visibility: hidden;
-    text-align: center; /* Center text within the question and answer */
+    text-align: center;
 }
 
 .answer {
@@ -157,3 +157,5 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
+
+/* Test */
