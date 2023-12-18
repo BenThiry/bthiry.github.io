@@ -82,3 +82,97 @@ footer {
     background-color: #f9f9f9;
 }
 
+/* Additional styles for the specific project */
+
+/* Add your new styles here */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+main {
+    padding: 20
+}
+
+#gallery {
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    width: 48%; /* Adjust as needed to fit two images in a row */
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    max-height: 300px; /* Adjust the maximum height as needed */
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.image-caption {
+    margin-top: 10px;
+}
+
+/* Additional styles for videos */
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.video-container iframe {
+    width: 48%; /* Adjust as needed to fit two videos in a row */
+    height: 300px; /* Adjust the height as needed */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-container iframe:hover {
+    transform: scale(1.1);
+}
